@@ -7,6 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+      "deploy": "ng build --configuration production --base-href \"/ecommerce-githubpages/\" && npx angular-cli-ghpages --dir=dist/ecommerce",
+
+
     "serve:ssr:ecommerce": "node dist/ecommerce/server/server.mjs"
   },
   "prettier": {
