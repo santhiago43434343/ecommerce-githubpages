@@ -9,9 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-      "deploy": "ng build --configuration production --base-href \"/ecommerce-githubpages/\" && npx angular-cli-ghpages --dir=dist/ecommerce",
-
-
+    "deploy": "ng build --configuration production --base-href \"/ecommerce-githubpages/\" && npx angular-cli-ghpages --dir=dist/ecommerce",
     "serve:ssr:ecommerce": "node dist/ecommerce/server/server.mjs"
   },
   "prettier": {
@@ -47,6 +45,7 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^20.3.11",
     "@angular/build": "^20.3.10",
     "@angular/cli": "^20.3.10",
     "@angular/compiler-cli": "^20.3.0",
