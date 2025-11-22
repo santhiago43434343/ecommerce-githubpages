@@ -2,6 +2,6 @@
 export const environment = {
   production: true,
   useHash: true ,// rotas com hash: /#/produtos 
-  baseHref: '/Proway-Computers/' //base para github pages 
+  baseHref: '/ecommerce-githubpages/' //base para github pages 
 
 };
