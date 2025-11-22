@@ -1,0 +1,70 @@
+<!-- HEADER -->
+<header class="main-header">
+  <h1 class="main-header__title">
+    <span class="main-header__title--blue">Proway</span>
+    <span class="main-header__title--orange">Computers</span>
+  </h1>
+
+  <div class="container-menu">
+    <nav class="main-header__menu">
+      <ul>
+        <!-- Botão Produtos -->
+        <li>
+          <a (click)="voltarParaProdutos()">
+            <i class="fa-solid fa-list"></i>
+            Produtos
+          </a>
+        </li>
+
+        <!-- Botão Carrinho -->
+        <li>
+          <a routerLink="/carrinho">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Carrinho
+            <span class="badge-carrinho">
+              {{ carrinhoService.obterCarrinho().length }}
+            </span>
+          </a>
+        </li>
+
+        <!-- Botão Contato -->
+        <li>
+          <a routerLink="/contato">
+            <i class="fa-solid fa-envelope"></i>
+            Contato
+          </a>
+        </li>
+
+        <!-- Redes sociais -->
+        <li>
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="fa-brands fa-square-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Formulário de busca -->
+  <form class="search-form" (submit)="buscar($event)">
+    <input
+      type="text"
+      [(ngModel)]="termoBusca"
+      name="busca"
+      placeholder="Buscar produtos..."
+    />
+    <button type="submit">
+      <i class="fa-solid fa-search"></i>
+    </button>
+  </form>
+</header>
