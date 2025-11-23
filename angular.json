@@ -22,8 +22,8 @@
               "src/favicon.ico",
               {
                 "glob": "**/*",
-                "input": "src/public",
-                "output": "assets"
+                "input": "public",
+                "output": ""
               }
             ],
             "styles": ["src/styles.scss"]
