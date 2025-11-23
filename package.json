@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --configuration production --base-href \"/ecommerce-githubpages/\" && npx angular-cli-ghpages --dir=dist/ecommerce",
+    "deploy:docs": "ng build --configuration production --output-path docs --base-href /ecommerce-githubpages/ && git add docs && git commit -m \"deploy\" && git push origin main",
     "serve:ssr:ecommerce": "node dist/ecommerce/server/server.mjs"
   },
   "prettier": {
