@@ -6,29 +6,7 @@ mkdir docs
 echo 🔨 Gerando build de produção...
 ng build --configuration production --output-path docs --base-href /ecommerce-githubpages/
 
-echo 📄 Copiando index.html como 404.html...
-copy docs\index.html docs\404.html
-
-echo 📂 Adicionando todas as mudanças ao Git...
-git add -A
-
-echo 💾 Criando commit...
-git commit -m "Deploy atualizado com fallback 404.html"
-
-echo ⬆️ Enviando para GitHub...
-git push origin main
-
-echo 🌟 Deploy finalizado! Verifique no GitHub Pages.
-pause
-@echo off
-echo 🚀 Limpando pasta docs...
-rmdir /S /Q docs
-mkdir docs
-
-echo 🔨 Gerando build de produção...
-ng build --configuration production --output-path docs --base-href /ecommerce-githubpages/
-
-echo 📄 Copiando index.html como 404.html...
+echo 📄 Criando fallback 404.html a partir do index.html...
 copy docs\index.html docs\404.html
 
 echo 🚫 Criando arquivo .nojekyll...
@@ -43,5 +21,5 @@ git commit -m "Deploy com fallback 404.html e .nojekyll"
 echo ⬆️ Enviando para GitHub...
 git push origin main
 
-echo 🌟 Deploy finalizado! Teste rotas como /produto/4 ou /carrinho no GitHub Pages.
+echo 🌟 Deploy finalizado! Teste rotas como /produto/5 ou /carrinho no GitHub Pages.
 pause
